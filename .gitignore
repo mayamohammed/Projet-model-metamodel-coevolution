@@ -1,0 +1,38 @@
+# Java
+target/
+*.class
+*.jar
+*.war
+
+# Maven
+.mvn/
+
+# Python
+__pycache__/
+*.pyc
+*.pkl
+venv/
+.env
+
+# IDE
+.idea/
+.eclipse/
+.settings/
+.classpath
+.project
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dataset volumineux
+data/dataset/processed/*.csv
+data/domains/*/models/v2/*.xmi
+data/domains/*/models/v3/*.xmi
+
+# Ne pas ignorer les .gitkeep
+!.gitkeep
