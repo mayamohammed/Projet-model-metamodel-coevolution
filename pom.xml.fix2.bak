@@ -20,7 +20,7 @@
         <module>java/migrator</module>
         <module>java/cli</module>
         <module>java/gui</module>
-        <module>java/collector</module></modules>
+        <module>java/collector</module>rn</modules>
 
     <properties>
         <java.version>11</java.version>
