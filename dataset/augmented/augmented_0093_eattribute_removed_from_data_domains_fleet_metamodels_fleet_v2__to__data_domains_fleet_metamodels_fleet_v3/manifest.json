@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0093_eattribute_removed_from_data_domains_fleet_metamodels_fleet_v2__to__data_domains_fleet_metamodels_fleet_v3",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_fleet_metamodels_fleet_v2__to__data_domains_fleet_metamodels_fleet_v3\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:27",
+  "ground_truth" : {
+    "change_type" : "EATTRIBUTE_REMOVED",
+    "element" : "year",
+    "context" : "Vehicle",
+    "old_value" : "year",
+    "new_value" : "",
+    "description" : "Removed EAttribute year from Vehicle"
+  }
+}

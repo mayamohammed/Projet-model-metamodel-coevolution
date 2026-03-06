@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0021_eclass_added_from_bundles_org.eclipse.emfcloud.modelserver.edit_resources_Command__11a7d73__c62bcea",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\bundles_org.eclipse.emfcloud.modelserver.edit_resources_Command__11a7d73__c62bcea\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:27",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "DerivedComponent_3",
+    "context" : "command",
+    "old_value" : "",
+    "new_value" : "DerivedComponent_3",
+    "description" : "Added EClass DerivedComponent_3"
+  }
+}

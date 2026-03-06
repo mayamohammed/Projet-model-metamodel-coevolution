@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0488_eclass_added_from_examples_org.eclipse.emfcloud.modelserver.glsp.example.model_model_model__0486d0a__66f8073",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\examples_org.eclipse.emfcloud.modelserver.glsp.example.model_model_model__0486d0a__66f8073\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:30",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "SyntheticElement_92",
+    "context" : "model",
+    "old_value" : "",
+    "new_value" : "SyntheticElement_92",
+    "description" : "Added EClass SyntheticElement_92"
+  }
+}

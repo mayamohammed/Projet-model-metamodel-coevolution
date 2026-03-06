@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0330_eclass_added_from_data_synthetic_change_nsuri4_metamodels_change_nsuri4_v1__to__data_synthetic_change_nsuri4_metamodels_change_nsuri4_v2",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_synthetic_change_nsuri4_metamodels_change_nsuri4_v1__to__data_synthetic_change_nsuri4_metamodels_change_nsuri4_v2\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:29",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "SyntheticElement_62",
+    "context" : "mining",
+    "old_value" : "",
+    "new_value" : "SyntheticElement_62",
+    "description" : "Added EClass SyntheticElement_62"
+  }
+}

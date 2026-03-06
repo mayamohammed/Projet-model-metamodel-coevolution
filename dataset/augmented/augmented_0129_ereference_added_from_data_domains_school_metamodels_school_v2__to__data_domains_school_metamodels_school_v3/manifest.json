@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0129_ereference_added_from_data_domains_school_metamodels_school_v2__to__data_domains_school_metamodels_school_v3",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_school_metamodels_school_v2__to__data_domains_school_metamodels_school_v3\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:28",
+  "ground_truth" : {
+    "change_type" : "EREFERENCE_ADDED",
+    "element" : "generatedRef_21",
+    "context" : "Student",
+    "old_value" : "",
+    "new_value" : "Teacher",
+    "description" : "Added EReference generatedRef_21 from Student to Teacher"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0100_eclass_added_from_data_domains_hospital_metamodels_hospital_v2__to__data_domains_hospital_metamodels_hospital_v3",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_hospital_metamodels_hospital_v2__to__data_domains_hospital_metamodels_hospital_v3\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:27",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "VirtualNode_19",
+    "context" : "hospital",
+    "old_value" : "",
+    "new_value" : "VirtualNode_19",
+    "description" : "Added EClass VirtualNode_19"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0208_eclass_added_from_data_synthetic_add_eclass5_metamodels_add_eclass5_v1__to__data_synthetic_add_eclass5_metamodels_add_eclass5_v2",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_synthetic_add_eclass5_metamodels_add_eclass5_v1__to__data_synthetic_add_eclass5_metamodels_add_eclass5_v2\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:28",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "InjectedEntity_38",
+    "context" : "cinema",
+    "old_value" : "",
+    "new_value" : "InjectedEntity_38",
+    "description" : "Added EClass InjectedEntity_38"
+  }
+}

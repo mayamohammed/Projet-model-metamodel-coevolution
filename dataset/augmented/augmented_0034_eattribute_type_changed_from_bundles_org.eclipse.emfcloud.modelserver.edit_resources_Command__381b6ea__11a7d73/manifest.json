@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0034_eattribute_type_changed_from_bundles_org.eclipse.emfcloud.modelserver.edit_resources_Command__381b6ea__11a7d73",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\bundles_org.eclipse.emfcloud.modelserver.edit_resources_Command__381b6ea__11a7d73\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:27",
+  "ground_truth" : {
+    "change_type" : "EATTRIBUTE_TYPE_CHANGED",
+    "element" : "type",
+    "context" : "Command",
+    "old_value" : "CommandKind",
+    "new_value" : "EString",
+    "description" : "Changed type of type : CommandKind -> EString"
+  }
+}

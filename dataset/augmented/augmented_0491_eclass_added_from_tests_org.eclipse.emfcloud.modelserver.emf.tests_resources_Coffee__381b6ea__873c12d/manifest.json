@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0491_eclass_added_from_tests_org.eclipse.emfcloud.modelserver.emf.tests_resources_Coffee__381b6ea__873c12d",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\tests_org.eclipse.emfcloud.modelserver.emf.tests_resources_Coffee__381b6ea__873c12d\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:30",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "NewConcept_95",
+    "context" : "coffee",
+    "old_value" : "",
+    "new_value" : "NewConcept_95",
+    "description" : "Added EClass NewConcept_95"
+  }
+}

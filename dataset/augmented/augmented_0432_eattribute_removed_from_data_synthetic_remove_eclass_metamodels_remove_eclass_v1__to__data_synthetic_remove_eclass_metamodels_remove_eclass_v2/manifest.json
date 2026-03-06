@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0432_eattribute_removed_from_data_synthetic_remove_eclass_metamodels_remove_eclass_v1__to__data_synthetic_remove_eclass_metamodels_remove_eclass_v2",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_synthetic_remove_eclass_metamodels_remove_eclass_v1__to__data_synthetic_remove_eclass_metamodels_remove_eclass_v2\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:29",
+  "ground_truth" : {
+    "change_type" : "EATTRIBUTE_REMOVED",
+    "element" : "isbn",
+    "context" : "Book",
+    "old_value" : "isbn",
+    "new_value" : "",
+    "description" : "Removed EAttribute isbn from Book"
+  }
+}

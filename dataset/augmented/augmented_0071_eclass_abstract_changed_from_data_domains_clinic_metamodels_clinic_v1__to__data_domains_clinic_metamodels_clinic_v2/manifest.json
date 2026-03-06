@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0071_eclass_abstract_changed_from_data_domains_clinic_metamodels_clinic_v1__to__data_domains_clinic_metamodels_clinic_v2",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_clinic_metamodels_clinic_v1__to__data_domains_clinic_metamodels_clinic_v2\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:27",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ABSTRACT_CHANGED",
+    "element" : "Patient",
+    "context" : "clinic",
+    "old_value" : "false",
+    "new_value" : "true",
+    "description" : "Changed abstract of Patient : false -> true"
+  }
+}

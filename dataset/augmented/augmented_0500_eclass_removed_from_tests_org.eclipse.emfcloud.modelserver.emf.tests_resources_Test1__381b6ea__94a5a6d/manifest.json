@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0500_eclass_removed_from_tests_org.eclipse.emfcloud.modelserver.emf.tests_resources_Test1__381b6ea__94a5a6d",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\tests_org.eclipse.emfcloud.modelserver.emf.tests_resources_Test1__381b6ea__94a5a6d\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:30",
+  "ground_truth" : {
+    "change_type" : "ECLASS_REMOVED",
+    "element" : "ConcreteClass1",
+    "context" : "test1",
+    "old_value" : "ConcreteClass1",
+    "new_value" : "",
+    "description" : "Removed EClass ConcreteClass1"
+  }
+}

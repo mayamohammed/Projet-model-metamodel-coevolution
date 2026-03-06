@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0164_eattribute_added_from_data_domains_smartgrid_metamodels_smartgrid_v2__to__data_domains_smartgrid_metamodels_smartgrid_v3",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_smartgrid_metamodels_smartgrid_v2__to__data_domains_smartgrid_metamodels_smartgrid_v3\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:28",
+  "ground_truth" : {
+    "change_type" : "EATTRIBUTE_ADDED",
+    "element" : "derivedAttr_28",
+    "context" : "Meter",
+    "old_value" : "",
+    "new_value" : "EFloat",
+    "description" : "Added EAttribute derivedAttr_28 to Meter"
+  }
+}

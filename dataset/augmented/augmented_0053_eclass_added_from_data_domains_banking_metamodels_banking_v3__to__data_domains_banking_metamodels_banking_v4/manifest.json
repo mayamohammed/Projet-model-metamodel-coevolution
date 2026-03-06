@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0053_eclass_added_from_data_domains_banking_metamodels_banking_v3__to__data_domains_banking_metamodels_banking_v4",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_banking_metamodels_banking_v3__to__data_domains_banking_metamodels_banking_v4\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:27",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "ComputedClass_7",
+    "context" : "banking",
+    "old_value" : "",
+    "new_value" : "ComputedClass_7",
+    "description" : "Added EClass ComputedClass_7"
+  }
+}

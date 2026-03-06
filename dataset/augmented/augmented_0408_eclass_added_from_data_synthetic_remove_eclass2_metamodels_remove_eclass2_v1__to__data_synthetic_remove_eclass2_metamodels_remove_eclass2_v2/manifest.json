@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0408_eclass_added_from_data_synthetic_remove_eclass2_metamodels_remove_eclass2_v1__to__data_synthetic_remove_eclass2_metamodels_remove_eclass2_v2",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_synthetic_remove_eclass2_metamodels_remove_eclass2_v1__to__data_synthetic_remove_eclass2_metamodels_remove_eclass2_v2\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:29",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "AddedType_76",
+    "context" : "medical",
+    "old_value" : "",
+    "new_value" : "AddedType_76",
+    "description" : "Added EClass AddedType_76"
+  }
+}

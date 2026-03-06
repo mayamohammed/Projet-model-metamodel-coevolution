@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0147_eclass_added_from_data_domains_shop_metamodels_shop_v3__to__data_domains_shop_metamodels_shop_v4",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_shop_metamodels_shop_v3__to__data_domains_shop_metamodels_shop_v4\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:28",
+  "ground_truth" : {
+    "change_type" : "ECLASS_ADDED",
+    "element" : "AddedType_26",
+    "context" : "shop",
+    "old_value" : "",
+    "new_value" : "AddedType_26",
+    "description" : "Added EClass AddedType_26"
+  }
+}
