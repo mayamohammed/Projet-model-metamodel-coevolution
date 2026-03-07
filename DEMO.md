@@ -21,7 +21,7 @@ mvn -f .\java\collector\pom.xml clean install
 Exécutez le collector pour commencer la récupération des données :
 
 ```bash
-mvn --% -f .\java\collector\pom.xml exec:java -Dexec.mainClass=VRAIE_MAIN_CLASS
+mvn --% -f .\java\collector\pom.xml exec:java -Dexec.mainClass=com.coevolution.collector.CollectionPipelineMain
 ```
 
 ### Démo 3 — Explorer les paires collectées
@@ -61,8 +61,7 @@ mvn -f .\java\augmentation\pom.xml clean install
 Lancez le processus de transformation des données :
 
 ```bash
-mvn --% -f .\java\augmentation\pom.xml exec:java -Dexec.mainClass=VRAIE_MAIN_CLASS
-```
+ mvn --% -f .\java\augmentation\pom.xml exec:java -Dexec.mainClass=com.coevolution.augmentation.pipeline.AugmentationPipelineMain ```
 
 ### Démo 6 — Vérifier les données augmentées
 
