@@ -21,7 +21,7 @@ mvn -f .\java\collector\pom.xml clean install
 Exécutez le collector pour commencer la récupération des données :
 
 ```bash
-mvn --% -f .\java\collector\pom.xml exec:java -Dexec.mainClass=com.coevolution.collector.CollectionPipelineMain
+mvn --% -f .\java\collector\pom.xml exec:java -Dexec.mainClass=com.coevolution.collector.CollectionPipelineMain -Dexec.args="C:\Users\Lenovo\eclipse-workspace1\Projet-model-metamodel-coevolution-main dataset 200"
 ```
 
 ### Démo 3 — Explorer les paires collectées
