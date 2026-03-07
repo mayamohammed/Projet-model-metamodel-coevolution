@@ -1,30 +1,48 @@
-# Demo Commands Documentation
+Guide de Démonstration du Projet
+Ce guide vous accompagne pas à pas pour compiler et exécuter les différents composants du projet (Collector et Augmentation).
 
-This document serves as a comprehensive guide to the demo commands used in the repository. 
+🛠️ Partie 1 : Le Collector
+Le collector est responsable de la récupération et de la structuration des données initiales.
 
-## Command Overview
+Démo 1 — Compiler le collector
+Avant toute chose, compilez le module Java du collector :
 
-- **Command 1**: Description of command 1
-- **Command 2**: Description of command 2
+PowerShell
+mvn -f .\java\collector\pom.xml clean install
+Démo 2 — Lancer le collector
+Exécutez le collector pour commencer la récupération des données :
 
-## Usage Instructions
+PowerShell
+mvn --% -f .\java\collector\pom.xml exec:java -Dexec.mainClass=VRAIE_MAIN_CLASS
+Démo 3 — Explorer les paires collectées
+Une fois l'exécution terminée, vérifiez la structure des données dans le dossier dataset :
 
-1. Step 1: Details about the first step.
-2. Step 2: Details about the second step.
+Nombre total de paires :
 
-## Examples
+PowerShell
+(Get-ChildItem -Directory .\dataset\pairs).Count
+Contenu d'une paire (exemple) :
 
-### Example 1
-```bash
-# Example command usage
-command_1 --option value
-```
-### Example 2
-```bash
-# Another example command
-command_2 --flag
-```
+PowerShell
+$pair = Get-ChildItem -Directory .\dataset\pairs | Select-Object -First 1
+dir $pair.FullName
+Get-Content ($pair.FullName + "\manifest.json")
+🧪 Partie 2 : L'Augmentation
+L'augmentation traite les paires collectées pour générer un dataset plus riche.
 
-## Conclusion
+Démo 4 — Compiler l’augmentation
+Compilez le module Java dédié à l'augmentation :
 
-This documentation should help you utilize the demo commands effectively.
+PowerShell
+mvn -f .\java\augmentation\pom.xml clean install
+Démo 5 — Lancer l’augmentation
+Lancez le processus de transformation des données :
+
+PowerShell
+mvn --% -f .\java\augmentation\pom.xml exec:java -Dexec.mainClass=VRAIE_MAIN_CLASS
+Démo 6 — Vérifier les données augmentées
+Vérifiez que les nouvelles données ont bien été générées dans le dossier augmented_pairs :
+
+PowerShell
+(Get-ChildItem -Directory .\dataset\augmented_pairs).Count
+Note : Assurez-vous d'avoir Maven installé et configuré dans votre variable d'environnement PATH avant de commencer
