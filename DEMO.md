@@ -81,8 +81,78 @@ Vérifiez que les nouvelles données ont bien été générées dans le dossier 
 
 ---
 
-## 📝 Notes importantes
+## ��� Notes importantes
 
 - Remplacez `VRAIE_MAIN_CLASS` par le véritable nom de la classe principale
 - Assurez-vous d'être dans le répertoire racine du projet avant d'exécuter les commandes
 - Chaque commande doit être copiée intégralement dans votre terminal PowerShell ou CMD
+
+---
+
+## 🔧 Configurer ton nom et ton email
+
+Dans le terminal tape :
+
+```powershell
+git config --global user.name "Ton Nom"
+```
+
+Puis :
+
+```powershell
+git config --global user.email "tonemail@gmail.com"
+```
+
+### Exemple :
+
+```powershell
+git config --global user.name "Ahmed Ali"
+git config --global user.email "ahmed@gmail.com"
+```
+
+---
+
+## 👥 Guide Démo Client
+
+### Étape 1 — Cloner le projet
+
+```powershell
+git clone https://github.com/mayamohammed/Projet-model-metamodel-coevolution.git
+cd Projet-model-metamodel-coevolution
+```
+
+### Étape 2 — Compiler le collector
+
+```powershell
+mvn -f .\java\collector\pom.xml clean install
+```
+
+### Étape 3 — Lancer le collector
+
+```powershell
+mvn -f .\java\collector\pom.xml compile exec:java
+```
+
+### Étape 4 — Vérifier les paires collectées
+
+```powershell
+(Get-ChildItem -Directory .\dataset\pairs).Count
+```
+
+### Étape 5 — Compiler l'augmentation
+
+```powershell
+mvn -f .\java\augmentation\pom.xml clean install
+```
+
+### Étape 6 — Lancer l'augmentation
+
+```powershell
+mvn -f .\java\augmentation\pom.xml compile exec:java
+```
+
+### Étape 7 — Vérifier les données augmentées
+
+```powershell
+(Get-ChildItem -Directory .\dataset\augmented).Count
+```
