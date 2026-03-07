@@ -3,37 +3,24 @@ package com.coevolution.collector.pipeline;
 import com.coevolution.collector.git.GitRepositoryManager;
 
 import java.io.File;
+import java.nio.file.Paths;
 
-/**
- * CollectorMain - point d entree principal du module collector.
- *
- * Usage :
- *   java -jar collector.jar <repoPath> [outputDir] [maxPairs]
- *
- * Arguments :
- *   repoPath  : chemin absolu vers le depot Git local (obligatoire)
- *   outputDir : dossier de sortie du dataset (optionnel, defaut: dataset)
- *   maxPairs  : nombre max de paires a collecter (optionnel, defaut: 50)
- *
- * Exemples :
- *   java -jar collector.jar C:\repos\myrepo
- *   java -jar collector.jar C:\repos\myrepo dataset 100
- */
 public class CollectorMain {
 
     public static void main(String[] args) throws Exception {
 
-        // ── Lire les arguments ────────────────────────────────────────────────
-        if (args.length < 1) {
-            printUsage();
-            System.exit(1);
-        }
+        File projectRoot = findProjectRoot();
 
-        String repoPath  = args[0];
-        String outputDir = args.length > 1 ? args[1] : "dataset";
-        int    maxPairs  = args.length > 2 ? parseIntSafe(args[2], 50) : 50;
+        String repoPath  = args.length > 0 ? args[0]
+                : System.getProperty("repo.path", projectRoot.getAbsolutePath());
 
-        // ── Afficher la configuration ─────────────────────────────────────────
+        String outputDir = args.length > 1 ? args[1]
+                : System.getProperty("output.dir",
+                        new File(projectRoot, "dataset").getAbsolutePath());
+
+        int maxPairs = args.length > 2 ? parseIntSafe(args[2], 200)
+                : Integer.parseInt(System.getProperty("max.pairs", "200"));
+
         System.out.println("=================================================");
         System.out.println("[CollectorMain] Demarrage du Collector");
         System.out.println("[CollectorMain] Repo     : " + repoPath);
@@ -41,26 +28,31 @@ public class CollectorMain {
         System.out.println("[CollectorMain] MaxPairs : " + maxPairs);
         System.out.println("=================================================");
 
-        // ── Verifier que le chemin du repo existe ─────────────────────────────
         File repoDir = new File(repoPath);
         if (!repoDir.exists() || !repoDir.isDirectory()) {
-            System.err.println("[CollectorMain] ERREUR : le chemin du repo n existe pas : " + repoPath);
+            System.err.println("[CollectorMain] ERREUR : chemin introuvable : " + repoPath);
             System.exit(1);
         }
 
-        // ── Ouvrir le depot Git ───────────────────────────────────────────────
+        File gitDir = new File(repoDir, ".git");
+        if (!gitDir.exists()) {
+            System.err.println("[CollectorMain] ERREUR : pas de depot Git dans : " + repoPath);
+            System.err.println("[CollectorMain] Dossier .git attendu dans     : " + gitDir.getAbsolutePath());
+            System.exit(1);
+        }
+
         GitRepositoryManager gitManager = new GitRepositoryManager();
         try {
             gitManager.openLocal(repoPath);
             System.out.println("[CollectorMain] Depot Git ouvert avec succes.");
 
-            // ── Lancer le pipeline ────────────────────────────────────────────
             File outDir = new File(outputDir);
+            outDir.mkdirs();
+
             CollectionPipeline pipeline = new CollectionPipeline(gitManager, outDir);
             pipeline.setMaxPairs(maxPairs);
             pipeline.run();
 
-            // ── Afficher le resume final ──────────────────────────────────────
             System.out.println("\n[CollectorMain] Resume :");
             System.out.println("  Paires collectees : " + pipeline.getPairsCollected());
             System.out.println("  Paires identiques : " + pipeline.getPairsIdentical());
@@ -78,26 +70,35 @@ public class CollectorMain {
         }
     }
 
-    /** Affiche l aide sur l utilisation. */
-    private static void printUsage() {
-        System.out.println("Usage : CollectorMain <repoPath> [outputDir] [maxPairs]");
-        System.out.println("");
-        System.out.println("  repoPath  : chemin absolu vers le depot Git local (obligatoire)");
-        System.out.println("  outputDir : dossier de sortie du dataset (defaut: dataset)");
-        System.out.println("  maxPairs  : nombre max de paires a collecter (defaut: 50)");
-        System.out.println("");
-        System.out.println("Exemples :");
-        System.out.println("  CollectorMain C:\\repos\\myrepo");
-        System.out.println("  CollectorMain C:\\repos\\myrepo dataset 100");
+    /**
+     * Remonte depuis user.dir jusqu'à trouver un dossier contenant .git
+     * Fonctionne quel que soit le niveau d'imbrication du module Maven
+     */
+    private static File findProjectRoot() {
+        File dir = new File(System.getProperty("user.dir")).getAbsoluteFile();
+
+        // Remonte jusqu'à trouver un .git
+        File current = dir;
+        while (current != null) {
+            if (new File(current, ".git").exists()) {
+                System.out.println("[CollectorMain] Racine projet detectee : "
+                        + current.getAbsolutePath());
+                return current;
+            }
+            current = current.getParentFile();
+        }
+
+        // Aucun .git trouvé → utilise user.dir tel quel
+        System.out.println("[CollectorMain] Aucun .git trouve, utilisation de : "
+                + dir.getAbsolutePath());
+        return dir;
     }
 
-    /** Parse un entier avec une valeur par defaut si erreur. */
     private static int parseIntSafe(String value, int defaultValue) {
         try {
             return Integer.parseInt(value);
         } catch (NumberFormatException e) {
-            System.out.println("[CollectorMain] Valeur maxPairs invalide, utilisation defaut: "
-                    + defaultValue);
+            System.out.println("[CollectorMain] maxPairs invalide, defaut: " + defaultValue);
             return defaultValue;
         }
     }
