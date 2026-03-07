@@ -50,13 +50,10 @@
                 <version>3.1.0</version>
                 <configuration>
                     <mainClass>com.coevolution.augmentation.pipeline.AugmentationMain</mainClass>
-                    <arguments>
-                        <argument>C:\Users\maya mohammed\eclipse-workspace\model-metamodel-coevolution3\dataset\pairs</argument>
-                        <argument>C:\Users\maya mohammed\eclipse-workspace\model-metamodel-coevolution3\dataset\augmented</argument>
-                        <argument>10</argument>
-                    </arguments>
+                    
                 </configuration>
             </plugin>
         </plugins>
     </build>
 </project>
+
