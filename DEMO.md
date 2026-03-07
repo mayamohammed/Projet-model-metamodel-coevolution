@@ -61,14 +61,15 @@ mvn -f .\java\augmentation\pom.xml clean install
 Lancez le processus de transformation des données :
 
 ```bash
- mvn --% -f .\java\augmentation\pom.xml exec:java -Dexec.mainClass=com.coevolution.augmentation.pipeline.AugmentationPipelineMain ```
+ mvn --% -f .\java\augmentation\pom.xml exec:java -Dexec.mainClass=com.coevolution.augmentation.pipeline.AugmentationPipelineMain
+```
 
 ### Démo 6 — Vérifier les données augmentées
 
 Vérifiez que les nouvelles données ont bien été générées dans le dossier `augmented_pairs` :
 
 ```powershell
-(Get-ChildItem -Directory .\dataset\augmented_pairs).Count
+(Get-ChildItem -Directory .\dataset\augmented).Count
 ```
 
 ---
