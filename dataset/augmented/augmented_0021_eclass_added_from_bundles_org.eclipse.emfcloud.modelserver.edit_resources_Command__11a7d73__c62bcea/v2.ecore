@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="ASCII"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="command" nsURI="http://www.eclipsesource.com/schema/2019/modelserver/command" nsPrefix="cmd">
+  <eClassifiers xsi:type="ecore:EClass" name="Command">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="owner">
+      <eType xsi:type="ecore:EClass" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="feature">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="indices" upperBound="-1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataValues" upperBound="-1">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectValues" upperBound="-1">
+      <eType xsi:type="ecore:EClass" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="objectsToAdd" upperBound="-1" containment="true">
+      <eType xsi:type="ecore:EClass" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1" containment="true" resolveProxies="false">
+      <eType xsi:type="ecore:EClass" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EStringToStringMapEntry"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompoundCommand" eSuperTypes="//Command">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commands" upperBound="-1" eType="//Command" containment="true" resolveProxies="false"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommandExecutionResult">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1">
+      <eType xsi:type="ecore:EDataType" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1" eType="//Command" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="affectedObjects" upperBound="-1">
+      <eType xsi:type="ecore:EClass" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="changeDescription" containment="true">
+      <eType xsi:type="ecore:EClass" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EObject"/>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="details" upperBound="-1" containment="true" resolveProxies="false">
+      <eType xsi:type="ecore:EClass" href="../../org.eclipse.emf.ecore/model/Ecore.ecore#//EStringToStringMapEntry"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DerivedComponent_3">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id">
+      <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

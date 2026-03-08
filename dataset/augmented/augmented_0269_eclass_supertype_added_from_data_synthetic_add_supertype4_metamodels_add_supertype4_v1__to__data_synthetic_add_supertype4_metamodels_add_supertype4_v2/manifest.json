@@ -1,0 +1,16 @@
+{
+  "pair_id" : "augmented_0269_eclass_supertype_added_from_data_synthetic_add_supertype4_metamodels_add_supertype4_v1__to__data_synthetic_add_supertype4_metamodels_add_supertype4_v2",
+  "source" : "augmented",
+  "v1" : "v1.ecore",
+  "v2" : "v2.ecore",
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace3\\model-metamodel-coevolution3\\dataset\\pairs\\data_synthetic_add_supertype4_metamodels_add_supertype4_v1__to__data_synthetic_add_supertype4_metamodels_add_supertype4_v2\\v1.ecore",
+  "timestamp" : "2026-03-08 17:00:41",
+  "ground_truth" : {
+    "change_type" : "ECLASS_SUPERTYPE_ADDED",
+    "element" : "Motorized",
+    "context" : "Truck",
+    "old_value" : "",
+    "new_value" : "Motorized",
+    "description" : "Truck now extends Motorized"
+  }
+}
