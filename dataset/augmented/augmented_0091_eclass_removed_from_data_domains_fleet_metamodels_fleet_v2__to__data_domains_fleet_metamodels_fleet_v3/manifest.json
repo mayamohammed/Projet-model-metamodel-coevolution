@@ -3,8 +3,13 @@
   "source" : "augmented",
   "v1" : "v1.ecore",
   "v2" : "v2.ecore",
+<<<<<<< HEAD
   "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace3\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_fleet_metamodels_fleet_v2__to__data_domains_fleet_metamodels_fleet_v3\\v1.ecore",
   "timestamp" : "2026-03-08 17:00:40",
+=======
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_domains_fleet_metamodels_fleet_v2__to__data_domains_fleet_metamodels_fleet_v3\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:27",
+>>>>>>> e007b03ef3d011f4db10c88dd79f49075a7da091
   "ground_truth" : {
     "change_type" : "ECLASS_REMOVED",
     "element" : "Driver",

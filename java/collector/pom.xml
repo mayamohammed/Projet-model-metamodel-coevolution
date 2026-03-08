@@ -13,6 +13,7 @@
     <artifactId>coevolution-collector</artifactId>
     <packaging>jar</packaging>
     <name>CoEvolution :: Collector</name>
+
     <dependencies>
         <dependency>
             <groupId>org.eclipse.jgit</groupId>
@@ -35,13 +36,16 @@
             <version>2.16.0</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.13.0</version>
-                <configuration><release>11</release></configuration>
+                <configuration>
+                    <release>11</release>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -49,11 +53,8 @@
                 <version>3.1.0</version>
                 <configuration>
                     <mainClass>com.coevolution.collector.pipeline.CollectorMain</mainClass>
-                    <arguments>
-                        <argument>C:\Users\maya mohammed\eclipse-workspace\model-metamodel-coevolution2</argument>
-                        <argument>dataset</argument>
-                        <argument>200</argument>
-                    </arguments>
+                    <!-- Aucun argument hardcodé : CollectorMain détecte
+                         automatiquement la racine du projet via user.dir -->
                 </configuration>
             </plugin>
         </plugins>

@@ -3,8 +3,13 @@
   "source" : "augmented",
   "v1" : "v1.ecore",
   "v2" : "v2.ecore",
+<<<<<<< HEAD
   "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace3\\model-metamodel-coevolution3\\dataset\\pairs\\data_synthetic_remove_eclass3_metamodels_remove_eclass3_v1__to__data_synthetic_remove_eclass3_metamodels_remove_eclass3_v2\\v1.ecore",
   "timestamp" : "2026-03-08 17:00:42",
+=======
+  "origin_file" : "C:\\Users\\maya mohammed\\eclipse-workspace\\model-metamodel-coevolution3\\dataset\\pairs\\data_synthetic_remove_eclass3_metamodels_remove_eclass3_v1__to__data_synthetic_remove_eclass3_metamodels_remove_eclass3_v2\\v1.ecore",
+  "timestamp" : "2026-03-06 11:39:29",
+>>>>>>> e007b03ef3d011f4db10c88dd79f49075a7da091
   "ground_truth" : {
     "change_type" : "EATTRIBUTE_ADDED",
     "element" : "injectedValue_77",
